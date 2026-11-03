@@ -1,0 +1,353 @@
+/* estilo do portfolio - julia somensi */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #2b2b2b;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  color: #6b4fa8;
+}
+
+/* menu */
+header {
+  background-color: #f4f0fa;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nome-menu {
+  font-weight: 600;
+  font-size: 20px;
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2b2b2b;
+  margin-left: 22px;
+  padding-bottom: 4px;
+}
+
+nav a:hover {
+  color: #6b4fa8;
+}
+
+/* pagina que esta aberta */
+nav a.ativo {
+  color: #6b4fa8;
+  font-weight: 600;
+  border-bottom: 2px solid #6b4fa8;
+}
+
+main {
+  padding: 50px 8%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 38px;
+  margin: 0 0 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+/* inicio */
+.inicio {
+  text-align: center;
+  padding: 60px 0 30px;
+}
+
+.inicio h1 {
+  font-size: 72px;
+  color: #6b4fa8;
+  line-height: 1.1;
+}
+
+.inicio p {
+  font-size: 22px;
+  margin: 10px 0 30px;
+}
+
+.botao {
+  display: inline-block;
+  background-color: #6b4fa8;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 25px;
+  text-decoration: none;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #523b85;
+}
+
+.botao-claro {
+  background-color: #e3dbf1;
+  color: #2b2b2b;
+}
+
+.botao-claro:hover {
+  background-color: #d2c6ea;
+}
+
+/* cards dos prototipos */
+.prototipos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.card {
+  border: 1px solid #e3dbf1;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  background-color: #f7f7f7;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.card-texto {
+  padding: 18px;
+}
+
+.card-texto h3 {
+  margin: 0 0 6px;
+}
+
+.card-texto p {
+  margin: 0 0 14px;
+  font-size: 15px;
+  color: #555;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  background-color: #f4f0fa;
+  color: #6b4fa8;
+  padding: 3px 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+/* sobre mim */
+.sobre-topo {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #e3dbf1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  color: #6b4fa8;
+  font-weight: 600;
+}
+
+.hobbies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.hobby {
+  background-color: #f4f0fa;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.hobby span {
+  font-size: 40px;
+}
+
+.hobby h3 {
+  margin: 8px 0 4px;
+}
+
+.hobby p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.lista-aprendendo li {
+  margin-bottom: 6px;
+}
+
+/* contato */
+.contato {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 50px;
+}
+
+.info-contato p {
+  margin: 6px 0;
+}
+
+.sobre-mim-contato {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f4f0fa;
+  border-radius: 12px;
+}
+
+.sobre-mim-contato li {
+  margin-bottom: 6px;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 5px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #6b4fa8;
+  outline: 2px solid #e3dbf1;
+}
+
+form textarea {
+  height: 130px;
+  resize: vertical;
+}
+
+.obs {
+  font-size: 13px;
+  color: #666;
+}
+
+.erro {
+  color: #c0392b;
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+
+.sucesso {
+  background-color: #e3f5e5;
+  color: #2e7d32;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.botoes-form {
+  margin-top: 22px;
+}
+
+/* ajuda */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #e3dbf1;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #f4f0fa;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  color: #777;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+}
+
+/* celular */
+@media (max-width: 750px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  .inicio h1 {
+    font-size: 46px;
+  }
+
+  .prototipos,
+  .contato {
+    grid-template-columns: 1fr;
+  }
+
+  .hobbies {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sobre-topo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+img.foto {
+  object-fit: cover;
+}

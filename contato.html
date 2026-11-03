@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Júlia Somensi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="nome-menu">Júlia Somensi</a>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre mim</a>
+      <a href="contato.html" class="ativo">Contato</a>
+      <a href="ajuda.html">Ajuda</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contato</h1>
+    <p>Se quiser falar comigo, é só preencher o formulário ou usar meus contatos abaixo.</p>
+
+    <div class="contato">
+      <div class="info-contato">
+        <h2>Júlia Yohanna Somensi</h2>
+        <p><strong>E-mail:</strong> <a href="mailto:julia.somensi@ufms.br">julia.somensi@ufms.br</a></p>
+        <p><strong>Telefone:</strong> (67) 99977-0401</p>
+        <p><strong>Cidade:</strong> Campo Grande - MS</p>
+
+        <div class="sobre-mim-contato">
+          <strong>Um pouco sobre mim:</strong>
+          <ul>
+            <li>Estou com vontade de aprender mais sobre a área</li>
+            <li>Sou proativa</li>
+            <li>Busco conhecimento e estou aberta a novas experiências</li>
+          </ul>
+        </div>
+      </div>
+
+      <form id="formulario" novalidate>
+        <p class="obs">Todos os campos com * são obrigatórios.</p>
+
+        <label for="nome">Nome *</label>
+        <input type="text" id="nome" placeholder="Seu nome">
+        <p class="erro" id="erro-nome"></p>
+
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" placeholder="exemplo@email.com">
+        <p class="erro" id="erro-email"></p>
+
+        <label for="assunto">Assunto *</label>
+        <select id="assunto">
+          <option value="">Escolha um assunto</option>
+          <option>Trabalho da faculdade</option>
+          <option>Oportunidade de estágio</option>
+          <option>Outro</option>
+        </select>
+        <p class="erro" id="erro-assunto"></p>
+
+        <label for="mensagem">Mensagem *</label>
+        <textarea id="mensagem" placeholder="Escreva sua mensagem aqui"></textarea>
+        <p class="erro" id="erro-mensagem"></p>
+
+        <div class="botoes-form">
+          <button type="submit" class="botao">Enviar</button>
+          <button type="reset" class="botao botao-claro">Limpar</button>
+        </div>
+
+        <p class="sucesso" id="sucesso" style="display: none;"></p>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    // confere se os campos foram preenchidos antes de enviar
+    var form = document.getElementById("formulario");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var ok = true;
+
+      var nome = document.getElementById("nome").value.trim();
+      var email = document.getElementById("email").value.trim();
+      var assunto = document.getElementById("assunto").value;
+      var mensagem = document.getElementById("mensagem").value.trim();
+
+      document.getElementById("erro-nome").textContent = "";
+      document.getElementById("erro-email").textContent = "";
+      document.getElementById("erro-assunto").textContent = "";
+      document.getElementById("erro-mensagem").textContent = "";
+      document.getElementById("sucesso").style.display = "none";
+
+      if (nome === "") {
+        document.getElementById("erro-nome").textContent = "Preencha seu nome.";
+        ok = false;
+      }
+      if (email === "" || !email.includes("@") || !email.includes(".")) {
+        document.getElementById("erro-email").textContent = "Digite um e-mail válido (ex: nome@email.com).";
+        ok = false;
+      }
+      if (assunto === "") {
+        document.getElementById("erro-assunto").textContent = "Escolha um assunto.";
+        ok = false;
+      }
+      if (mensagem === "") {
+        document.getElementById("erro-mensagem").textContent = "Escreva uma mensagem.";
+        ok = false;
+      }
+
+      if (ok) {
+        document.getElementById("sucesso").textContent = "Mensagem enviada! Obrigada, " + nome + ". Vou responder assim que puder.";
+        document.getElementById("sucesso").style.display = "block";
+        form.reset();
+      }
+    });
+
+    form.addEventListener("reset", function () {
+      document.getElementById("erro-nome").textContent = "";
+      document.getElementById("erro-email").textContent = "";
+      document.getElementById("erro-assunto").textContent = "";
+      document.getElementById("erro-mensagem").textContent = "";
+    });
+  </script>
+
+  <footer>
+    Feito por Júlia Somensi - Engenharia de Software UFMS - 2026
+  </footer>
+
+</body>
+</html>
